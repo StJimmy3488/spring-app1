@@ -20,10 +20,14 @@ public class TestSpring {
 //        rockMusicPlayer.playMusic();
 
 
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        musicPlayer.playMusic(MyEnum.CLASSICAL);
+//        musicPlayer.playMusic(MyEnum.ROCK);
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic(MyEnum.CLASSICAL);
-        musicPlayer.playMusic(MyEnum.ROCK);
+        System.out.println(musicPlayer.getVolume());
+        System.out.println(musicPlayer.getName());
 
+        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
 
         context.close();
 
